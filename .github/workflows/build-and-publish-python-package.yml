@@ -1,0 +1,26 @@
+name: Build and Publish Python Package
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+      - name: Build package
+        run: python setup.py sdist bdist_wheel
+      - name: Publish package to Nexus
+        uses: sonatype-nexus-community/nexus-repository-gradle-publish@v1.1.1
+        with:
+          groupId: com.example
+          artifactId: my-python-package
+          version: 1.0.0
+          repositoryUrl: http://54.171.92.83:8081
+          username: admin
+          password: nexusnexus
