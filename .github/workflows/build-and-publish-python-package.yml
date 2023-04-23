@@ -14,7 +14,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
       - name: Build package
-        run: python -m scripts/setup.py --sdist --wheel --outdir build/dist/
+        run: python scripts/setup.py sdist bdist_wheel --dist-dir build/dist/
       - name: Nexus Repository Publisher for GitHub Actions
         uses: sonatype-nexus-community/nexus-repo-github-action@1.0.0
         with:
@@ -23,4 +23,4 @@ jobs:
           password: ${{ secrets.NEXUS_PASSWORD }}
           format: pypi
           repository: slack-bot-releases
-          filename: build/dist
+          filename: build/dist/*
