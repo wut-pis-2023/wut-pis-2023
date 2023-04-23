@@ -5,7 +5,7 @@ with open('scripts/requirements.txt') as f:
 
 setup(
     name='spark-bot',
-    version='1.0.0',
+    version='1.2.0',
     author='Your Name',
     author_email='youremail@example.com',
     description='A short description of your package',

@@ -18,11 +18,11 @@ jobs:
       - name: Nexus Repository Publisher for GitHub Actions
         uses: sonatype-nexus-community/nexus-repo-github-action@1.0.0
         with:
-          serverUrl: http://52.16.240.11:8081/repository/slack-bot-releases/
+          serverUrl: http://52.16.240.11:8081
           username: admin
           password: nexusnexus
           format: pypi
           repository: slack-bot-releases
           coordinates: version=1.2.0
           assets: extension=tar.gz
-          filename: dist/spark-bot-1.0.0.tar.gz
+          filename: dist/spark-bot-1.2.0.tar.gz
