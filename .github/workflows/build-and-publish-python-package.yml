@@ -14,7 +14,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
       - name: Build package
-        run: python scripts/setup.py sdist bdist_wheel --dist-dir build/dist/
+        run: python scripts/setup.py sdist bdist_wheel --dist-dir dist/
       - name: Nexus Repository Publisher for GitHub Actions
         uses: sonatype-nexus-community/nexus-repo-github-action@1.0.0
         with:
@@ -24,5 +24,5 @@ jobs:
           format: pypi
           repository: slack-bot-releases
           coordinates: groupId=com.example artifactId=app version=1.0.0
-          assets: extension=whl
-          filename: build/dist/spark_bot-1.0.0-py3-none-any.whl
+          assets: extension=whl,tar.gz
+          filename: dist/*
