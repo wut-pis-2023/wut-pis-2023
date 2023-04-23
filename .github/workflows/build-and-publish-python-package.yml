@@ -24,5 +24,5 @@ jobs:
           format: pypi
           repository: slack-bot-releases
           coordinates: groupId=com1.example artifactId=myapp version=1.2.0
-          assets: extension=whl extension=tar.gz
-          filename: dist/*
+          assets: extension=tar.gz
+          filename: dist/*tar.gz
