@@ -21,4 +21,4 @@ jobs:
           repository: slack-bot-releases
           coordinates: version=1.2.0
           assets: extension=tar.gz
-          filename: dist/*
+          filename: dist/spark-bot-1.0.0.tar.gz
