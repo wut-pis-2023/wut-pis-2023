@@ -1,6 +1,6 @@
 from setuptools import setup
 
-with open('requirements.txt') as f:
+with open('scripts/requirements.txt') as f:
     requirements = f.readlines()
 
 setup(
