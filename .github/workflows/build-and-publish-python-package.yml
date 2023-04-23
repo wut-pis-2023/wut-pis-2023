@@ -3,7 +3,7 @@ name: Build and Publish Python Package
 on:
   push:
     branches:
-      - main
+      - WP-2-Set-up-Nexus-integration
 
 jobs:
   build-and-publish:
