@@ -4,7 +4,7 @@ with open('scripts/requirements.txt') as f:
     requirements = f.readlines()
 
 setup(
-    name='spark_bot',
+    name='spark-bot',
     version='1.0.0',
     author='Your Name',
     author_email='youremail@example.com',

@@ -1,1 +1,5 @@
 .idea/
+build/
+dist/
+/scripts/spark_bot.egg-info/
+/spark_bot.egg-info/
