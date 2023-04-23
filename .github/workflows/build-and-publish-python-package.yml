@@ -18,11 +18,11 @@ jobs:
       - name: Nexus Repository Publisher for GitHub Actions
         uses: sonatype-nexus-community/nexus-repo-github-action@1.0.0
         with:
-          serverUrl: http://52.16.240.11
+          serverUrl: http://52.16.240.11:8081/repository/slack-bot-releases
           username: ${{ secrets.NEXUS_USERNAME }}
           password: ${{ secrets.NEXUS_PASSWORD }}
           format: pypi
           repository: slack-bot-releases
-          coordinates: groupId=com1.example artifactId=myapp version=1.1.0
+          coordinates: groupId=com1.example artifactId=myapp version=1.2.0
           assets: extension=whl extension=tar.gz
           filename: dist/*
