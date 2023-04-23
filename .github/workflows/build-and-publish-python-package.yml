@@ -21,6 +21,6 @@ jobs:
           groupId: com.example
           artifactId: my-python-package
           version: 1.0.0
-          repositoryUrl: http://54.171.92.83:8081
-          username: admin
-          password: nexusnexus
+          repositoryUrl: http://52.16.240.11:8081
+          username: ${{ secrets.NEXUS_USERNAME }}
+          password: ${{ secrets.NEXUS_PASSWORD }}
