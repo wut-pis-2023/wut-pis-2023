@@ -23,6 +23,6 @@ jobs:
           password: ${{ secrets.NEXUS_PASSWORD }}
           format: pypi
           repository: slack-bot-releases
-          coordinates: groupId=com.example artifactId=app version=1.0.0
+          coordinates: groupId=com1.example artifactId=myapp version=1.1.0
           assets: extension=whl extension=tar.gz
           filename: dist/*
