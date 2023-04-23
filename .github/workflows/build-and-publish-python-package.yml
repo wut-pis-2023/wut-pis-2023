@@ -14,13 +14,13 @@ jobs:
       - name: Install dependencies
         run: pip install -r scripts/requirements.txt
       - name: Build package
-        run: python scripts/setup.py sdist bdist_wheel
+        run: python -m scripts/setup.py --sdist --wheel --outdir build/dist/
       - name: Nexus Repository Publisher for GitHub Actions
         uses: sonatype-nexus-community/nexus-repo-github-action@1.0.0
         with:
-          groupId: com.example
-          artifactId: my-python-package
-          version: 1.0.0
-          repositoryUrl: http://52.16.240.11:8081
+          serverUrl: http://163c6cdd.ngrok.io
           username: ${{ secrets.NEXUS_USERNAME }}
           password: ${{ secrets.NEXUS_PASSWORD }}
+          format: pypi
+          repository: slack-bot-releases
+          filename: build/dist
