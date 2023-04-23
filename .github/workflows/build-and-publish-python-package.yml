@@ -27,4 +27,4 @@ jobs:
           repository: slack-bot-releases
           coordinates: version=1.2.0 artifactId=slack-bot
           assets: extension=whl
-          filename: dist/slack-bot-1.2.0-py3-none-any.whl
+          filename: dist/slack_bot-1.2.0-py3-none-any.whl
