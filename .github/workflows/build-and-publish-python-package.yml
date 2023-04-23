@@ -23,6 +23,6 @@ jobs:
           password: nexusnexus
           format: pypi
           repository: slack-bot-releases
-          coordinates: com.example.spark-bot spark-bot 1.0.0
+          coordinates: groupId=nx-admin artifactId=spark-bot version=1.2.0
           assets: extension=whl extension=tar.gz
           filename: dist/*
