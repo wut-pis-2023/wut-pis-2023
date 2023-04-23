@@ -1,0 +1,68 @@
+[
+{
+    "id": "C05429WJLDD",
+    "name": "first-model",
+    "created": 1682189435,
+    "creator": "U054KAGRES0",
+    "is_archived": false,
+    "is_general": false,
+    "members": [
+        "U054KAGRES0",
+        "U0556GRJK88"
+    ],
+    "topic": {
+        "value": "",
+        "creator": "",
+        "last_set": 0
+    },
+    "purpose": {
+        "value": "This channel is for everything #first-model. Hold meetings, share docs, and make decisions together with your team.",
+        "creator": "U054KAGRES0",
+        "last_set": 1682189435
+    }
+},
+{
+    "id": "C054DTJ1N6R",
+    "name": "general",
+    "created": 1682189284,
+    "creator": "U054KAGRES0",
+    "is_archived": false,
+    "is_general": true,
+    "members": [
+        "U054KAGRES0",
+        "U0556GRJK88"
+    ],
+    "topic": {
+        "value": "",
+        "creator": "",
+        "last_set": 0
+    },
+    "purpose": {
+        "value": "This is the one channel that will always include everyone. It’s a great spot for announcements and team-wide conversations.",
+        "creator": "U054KAGRES0",
+        "last_set": 1682189284
+    }
+},
+{
+    "id": "C054GN4GTL3",
+    "name": "random",
+    "created": 1682189285,
+    "creator": "U054KAGRES0",
+    "is_archived": false,
+    "is_general": false,
+    "members": [
+        "U054KAGRES0",
+        "U0556GRJK88"
+    ],
+    "topic": {
+        "value": "",
+        "creator": "",
+        "last_set": 0
+    },
+    "purpose": {
+        "value": "This channel is for... well, everything else. It’s a place for team jokes, spur-of-the-moment ideas, and funny GIFs. Go wild!",
+        "creator": "U054KAGRES0",
+        "last_set": 1682189285
+    }
+}
+]

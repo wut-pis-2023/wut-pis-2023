@@ -1,0 +1,123 @@
+[
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1682189285.172889",
+        "user": "U054KAGRES0",
+        "text": "<@U054KAGRES0> has joined the channel"
+    },
+    {
+        "client_msg_id": "81aeb2c1-c33e-47a3-9693-aa0db553d1be",
+        "type": "message",
+        "text": "Where are the settings?",
+        "user": "U054KAGRES0",
+        "ts": "1682189661.750689",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "bT3",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Where are the settings?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T054VEU0FHP",
+        "user_team": "T054VEU0FHP",
+        "source_team": "T054VEU0FHP",
+        "user_profile": {
+            "avatar_hash": "f9c6855bd8bb",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-04-22\/5155356894404_f9c6855bd8bbd0afae5b_72.png",
+            "first_name": "Filip",
+            "real_name": "Filip Pawłowski",
+            "display_name": "",
+            "team": "T054VEU0FHP",
+            "name": "filip.pawlowski001",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "50ee24ed-8167-4942-8b91-028d1942d1b8",
+        "type": "message",
+        "text": "Top left corner.",
+        "user": "U054KAGRES0",
+        "ts": "1682189685.008439",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "YWLW",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Top left corner."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T054VEU0FHP",
+        "user_team": "T054VEU0FHP",
+        "source_team": "T054VEU0FHP",
+        "user_profile": {
+            "avatar_hash": "f9c6855bd8bb",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-04-22\/5155356894404_f9c6855bd8bbd0afae5b_72.png",
+            "first_name": "Filip",
+            "real_name": "Filip Pawłowski",
+            "display_name": "",
+            "team": "T054VEU0FHP",
+            "name": "filip.pawlowski001",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "0c1d0bcd-4866-4bf7-9f81-ade080b5824f",
+        "type": "message",
+        "text": "Actually these messages are made to produce some data.",
+        "user": "U054KAGRES0",
+        "ts": "1682189694.326219",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "5EG",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Actually these messages are made to produce some data."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T054VEU0FHP",
+        "user_team": "T054VEU0FHP",
+        "source_team": "T054VEU0FHP",
+        "user_profile": {
+            "avatar_hash": "f9c6855bd8bb",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-04-22\/5155356894404_f9c6855bd8bbd0afae5b_72.png",
+            "first_name": "Filip",
+            "real_name": "Filip Pawłowski",
+            "display_name": "",
+            "team": "T054VEU0FHP",
+            "name": "filip.pawlowski001",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    }
+]

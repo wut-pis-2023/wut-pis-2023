@@ -1,0 +1,85 @@
+[
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1682189285.367199",
+        "user": "U054KAGRES0",
+        "text": "<@U054KAGRES0> has joined the channel"
+    },
+    {
+        "client_msg_id": "7d0e68fa-6894-4e50-9307-9597c1acc7ca",
+        "type": "message",
+        "text": "Wanna hear a joke?",
+        "user": "U054KAGRES0",
+        "ts": "1682189669.880749",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "ihY",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Wanna hear a joke?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T054VEU0FHP",
+        "user_team": "T054VEU0FHP",
+        "source_team": "T054VEU0FHP",
+        "user_profile": {
+            "avatar_hash": "f9c6855bd8bb",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-04-22\/5155356894404_f9c6855bd8bbd0afae5b_72.png",
+            "first_name": "Filip",
+            "real_name": "Filip Pawłowski",
+            "display_name": "",
+            "team": "T054VEU0FHP",
+            "name": "filip.pawlowski001",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "adc1845d-4904-4522-849a-fa2dc2c04141",
+        "type": "message",
+        "text": "No pls get to work",
+        "user": "U054KAGRES0",
+        "ts": "1682189675.223369",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "eBehh",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "No pls get to work"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T054VEU0FHP",
+        "user_team": "T054VEU0FHP",
+        "source_team": "T054VEU0FHP",
+        "user_profile": {
+            "avatar_hash": "f9c6855bd8bb",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-04-22\/5155356894404_f9c6855bd8bbd0afae5b_72.png",
+            "first_name": "Filip",
+            "real_name": "Filip Pawłowski",
+            "display_name": "",
+            "team": "T054VEU0FHP",
+            "name": "filip.pawlowski001",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    }
+]

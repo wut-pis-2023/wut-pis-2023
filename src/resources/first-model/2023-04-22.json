@@ -1,0 +1,123 @@
+[
+    {
+        "type": "message",
+        "subtype": "channel_join",
+        "ts": "1682189435.221609",
+        "user": "U054KAGRES0",
+        "text": "<@U054KAGRES0> has joined the channel"
+    },
+    {
+        "client_msg_id": "671a0279-0402-4284-87bc-73184eae7535",
+        "type": "message",
+        "text": "This is for testing purposes and real data creation.",
+        "user": "U054KAGRES0",
+        "ts": "1682189468.136489",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "PLKbn",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "This is for testing purposes and real data creation."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T054VEU0FHP",
+        "user_team": "T054VEU0FHP",
+        "source_team": "T054VEU0FHP",
+        "user_profile": {
+            "avatar_hash": "f9c6855bd8bb",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-04-22\/5155356894404_f9c6855bd8bbd0afae5b_72.png",
+            "first_name": "Filip",
+            "real_name": "Filip Pawłowski",
+            "display_name": "",
+            "team": "T054VEU0FHP",
+            "name": "filip.pawlowski001",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "24a98ea5-bf88-46ea-af32-8ca295b29ac2",
+        "type": "message",
+        "text": "Question to be found in chats: how to download data from here?",
+        "user": "U054KAGRES0",
+        "ts": "1682189513.852619",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "jI7B",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Question to be found in chats: how to download data from here?"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T054VEU0FHP",
+        "user_team": "T054VEU0FHP",
+        "source_team": "T054VEU0FHP",
+        "user_profile": {
+            "avatar_hash": "f9c6855bd8bb",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-04-22\/5155356894404_f9c6855bd8bbd0afae5b_72.png",
+            "first_name": "Filip",
+            "real_name": "Filip Pawłowski",
+            "display_name": "",
+            "team": "T054VEU0FHP",
+            "name": "filip.pawlowski001",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    },
+    {
+        "client_msg_id": "faa65dc9-b890-417e-8fb7-789fa3b546bf",
+        "type": "message",
+        "text": "Hopefully it can see it.",
+        "user": "U054KAGRES0",
+        "ts": "1682189708.554209",
+        "blocks": [
+            {
+                "type": "rich_text",
+                "block_id": "Rb6x",
+                "elements": [
+                    {
+                        "type": "rich_text_section",
+                        "elements": [
+                            {
+                                "type": "text",
+                                "text": "Hopefully it can see it."
+                            }
+                        ]
+                    }
+                ]
+            }
+        ],
+        "team": "T054VEU0FHP",
+        "user_team": "T054VEU0FHP",
+        "source_team": "T054VEU0FHP",
+        "user_profile": {
+            "avatar_hash": "f9c6855bd8bb",
+            "image_72": "https:\/\/avatars.slack-edge.com\/2023-04-22\/5155356894404_f9c6855bd8bbd0afae5b_72.png",
+            "first_name": "Filip",
+            "real_name": "Filip Pawłowski",
+            "display_name": "",
+            "team": "T054VEU0FHP",
+            "name": "filip.pawlowski001",
+            "is_restricted": false,
+            "is_ultra_restricted": false
+        }
+    }
+]
