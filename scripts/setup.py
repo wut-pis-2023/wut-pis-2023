@@ -5,11 +5,11 @@ with open('scripts/requirements.txt') as f:
 
 setup(
     name='slack-bot',
-    version='1.3.0',
+    version='1.4.1',
     author='Your Name',
-    author_email='youremail@example.com',
-    description='A short description of your package',
-    long_description='description',
+    author_email='pis-wut-2023-best-team@example.com',
+    description='Great package for detecting similar topics in slack conversations.',
+    long_description='This package allows ',
     long_description_content_type='text/markdown',
     url='https://github.com/yourusername/yourpackage',
     packages=['src/slack-bot'],
