@@ -32,11 +32,12 @@ class SimilarSentenceIdentifier(object):
                     .replace('<',"") 
                     .replace(">","")
                     .replace('\\',"")
-                    .replace('\/',"")))
+                    .replace('\/',"")), sentence)
                     for link, sentence in data.rdd.collect()]
         return embeddings_links
         
     def get_similar(self, message:str, similarity_strength:int=0.25):
+        # Returns (link_to_message, original_message) sorted from the highest similarity
         sentence_embedding = self.model.encode(message)
         all_embeddings = [embedding[1] for embedding in self.embeddings_links]
         print(sentence_embedding, all_embeddings)
@@ -49,7 +50,7 @@ class SimilarSentenceIdentifier(object):
                     winners.append([self.embeddings_links[i], similarity_score])
 
         final_winners = sorted(winners, key=lambda x: x[1], reverse=True)
-        return [winner[0][0] for winner in final_winners]
+        return [(winner[0][0], winner[0][2]) for winner in final_winners]
 
 # if __name__ == "__main__":
 #     model = SimilarSentenceIdentifier()

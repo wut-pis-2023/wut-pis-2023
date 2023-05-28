@@ -4,6 +4,7 @@ from slack_bolt import App
 from slack_bolt.adapter.socket_mode import SocketModeHandler
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
+from ...src.model.similarity_model import SimilarSentenceIdentifier
 
 load_dotenv()
 
@@ -21,11 +22,18 @@ class SlackBot:
 
         @self.app.message()
         def say_hello(message, say):
+            MESSAGE_SHORTCUT_LEN=10
             text = message.get('text')
             channel_id = message.get('channel')
             message_id = message.get('ts')
 
-            say(f"Hey there <@{message['user']}>!\nYour message: {text}\nLink to message: {self.get_message_link(channel_id, message_id)}")
+            model = SimilarSentenceIdentifier()
+            model.read_slack_dict(self.read_all_messages(), columns_for_model=["link", "text"])
+            model.preprocess()
+            similar_messages = model.get_similar(message=text, similarity_strength=0.25)
+            similar_messages_str = [f"Message: {message[:MESSAGE_SHORTCUT_LEN]}...\t Link: {link}\n" for link, message in similar_messages]
+            
+            say(f"Hey there <@{message['user']}>!\nTheese messages seem to be similar to yours:\n{similar_messages_str}")
 
     def get_message_link(self, channel_id, message_id):
         return f"https://{self.workspace_name}.slack.com/archives/{channel_id}/p{message_id.replace('.', '')}"
@@ -100,10 +108,10 @@ class SlackBot:
         handler.start()
 
 
-def main():
+def slackbot_main():
     slack_bot = SlackBot(token=SLACK_BOT_TOKEN, workspace_name=WORKSPACE_NAME)
     slack_bot.run(app_token=SLACK_APP_TOKEN)
 
 
 if __name__ == '__main__':
-    main()
+    slackbot_main()
