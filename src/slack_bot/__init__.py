@@ -1,1 +1,1 @@
-from .slack_bot import SlackBotBase
+from .slack_bot import SlackBot
