@@ -12,7 +12,7 @@ setup(
     long_description='This package allows to employ a bot on a slack channel to detect similar messages.',
     long_description_content_type='text/markdown',
     url='https://github.com/wut-pis-2023/wut-pis-2023/tree/main',
-    packages=['src/slack-bot'],
+    packages=['src/slack_bot'],
     install_requires=requirements,
     classifiers=[
         'Programming Language :: Python :: 3',
