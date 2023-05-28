@@ -60,12 +60,12 @@ class SlackBot:
             
             if similar_messages:
                 similar_messages_str = ""
-                for link, message in similar_messages:
-                    # Ignore the message that bot replies to
-                    if link == self.get_message_link(channel_id, message_id):
+                for link_, message_ in similar_messages:
+                    # Ignore the message_ that bot replies to
+                    if link_ == self.get_message_link(channel_id, message_id):
                         logging.info("No similar messages found")
                         continue
-                    similar_messages_str += f"Message: {message[:MESSAGE_SHORTCUT_LEN]}...\t Link: {link}\n"           
+                    similar_messages_str += f"Message: {message_[:MESSAGE_SHORTCUT_LEN]}...\t Link: {link_}\n"           
                 say(f"Hey there <@{message['user']}>!\nTheese messages seem to be similar to yours:\n{similar_messages_str}")
 
     def get_message_link(self, channel_id, message_id):
