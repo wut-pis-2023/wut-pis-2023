@@ -1,0 +1,8 @@
+numpy
+pyspark==3.2.2
+pytest==7.2.2
+setuptools~=65.5.0
+python-dotenv
+sentence-transformers
+slack-bolt
+slack-sdk
