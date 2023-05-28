@@ -51,8 +51,8 @@ class SimilarSentenceIdentifier(object):
         final_winners = sorted(winners, key=lambda x: x[1], reverse=True)
         return [winner[0][0] for winner in final_winners]
 
-if __name__ == "__main__":
-    model = SimilarSentenceIdentifier()
-    model.read_json()
-    model.preprocess()
-    print(model.get_similar('ways to export files from slack'))
+# if __name__ == "__main__":
+#     model = SimilarSentenceIdentifier()
+#     model.read_json()
+#     model.preprocess()
+    # print(model.get_similar('ways to export files from slack'))
