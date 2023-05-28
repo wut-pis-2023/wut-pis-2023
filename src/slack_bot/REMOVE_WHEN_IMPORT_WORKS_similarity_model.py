@@ -2,8 +2,8 @@
 # !pip install -U sentence-transformers
 
 from pyspark.sql import SparkSession, DataFrame
-import numpy as np
 import logging
+import numpy as np
 from sentence_transformers import SentenceTransformer, util
 
 class SimilarSentenceIdentifier(object):
