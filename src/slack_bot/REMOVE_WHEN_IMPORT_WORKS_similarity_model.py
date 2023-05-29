@@ -5,6 +5,7 @@ from pyspark.sql import SparkSession, DataFrame
 import logging
 import numpy as np
 from sentence_transformers import SentenceTransformer, util
+logger = logging.getLogger("slack-bot")
 
 class SimilarSentenceIdentifier(object):
     def __init__(self):
@@ -21,7 +22,7 @@ class SimilarSentenceIdentifier(object):
         for channel_id, messages in data_dict.items():
             if messages:
                 self.df = self.spark.createDataFrame(data=messages).select(columns_for_model) 
-        logging.info(f"Data was added to the model")
+        logger.info(f"Data was added to the model")
                 
 
     def preprocess(self):
@@ -37,7 +38,7 @@ class SimilarSentenceIdentifier(object):
                     .replace('\\',"")
                     .replace('\/',"")), sentence)
                     for link, sentence in data.rdd.collect()]
-        logging.info(f"Data was preprocessed")
+        logger.info(f"Data was preprocessed")
         
         return embeddings_links
         
@@ -54,7 +55,7 @@ class SimilarSentenceIdentifier(object):
                     winners.append([self.embeddings_links[i], similarity_score])
 
         final_winners = sorted(winners, key=lambda x: x[1], reverse=True)
-        logging.info(f"Found {len(final_winners)} winners")
+        logger.info(f"Found {len(final_winners)} winners including this message")
         
         return [(winner[0][0], winner[0][2]) for winner in final_winners]
 
