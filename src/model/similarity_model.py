@@ -2,6 +2,7 @@ import logging
 
 from pyspark.sql import SparkSession, DataFrame
 import logging
+import itertools
 import numpy as np
 from sentence_transformers import SentenceTransformer, util
 logger = logging.getLogger("slack-bot")
@@ -24,9 +25,9 @@ class SimilarSentenceIdentifier(object):
         logger.info(f"Data is being added to the model")
         if columns_for_model is None:
             columns_for_model = ["link", "text"]
-        for channel_id, messages in data_dict.items():
-            if messages:
-                self.df = self.spark.createDataFrame(data=messages).select(columns_for_model) 
+        messages = list(itertools.chain.from_iterable(data_dict.values()))
+        if messages:
+            self.df = self.spark.createDataFrame(data=messages).select(columns_for_model) 
                 
 
     def preprocess(self):
