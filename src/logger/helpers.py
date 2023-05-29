@@ -1,3 +1,7 @@
+import logging
+import os
+
+
 def logging_config():
     # create a directory for logging
     log_dir = "log"
