@@ -6,7 +6,7 @@ from slack_bolt.adapter.socket_mode import SocketModeHandler
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 
-from src.model.similarity_model import SimilarSentenceIdentifier
+from similarity_model import SimilarSentenceIdentifier
 
 load_dotenv()
 logger = logging.getLogger("slack-bot")

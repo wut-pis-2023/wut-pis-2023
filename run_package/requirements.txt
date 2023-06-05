@@ -1,3 +1,2 @@
---extra-index-url http://52.16.240.11:8081/repository/slack-bot-releases/
-
-slack-bot
+--index-url http://52.16.240.11:8081/repository/slackbot-releases/
+slack_bot
