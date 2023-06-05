@@ -1,13 +1,13 @@
 from setuptools import setup, find_packages
 
-with open('scripts/requirements.txt') as f:
+with open('slackbot/requirements.txt') as f:
     requirements = f.read().splitlines()
 
 print("FOUND PACKAGES", find_packages())
 
 setup(
-    name='slack-bot',
-    version='1.5.2',
+    name='slackbot',
+    version='1.6.5',
     author='The WUT PIS team',
     author_email='pis-wut-2023-best-team@gmail.com',
     description='Great package for detecting similar topics in Slack conversations.',
