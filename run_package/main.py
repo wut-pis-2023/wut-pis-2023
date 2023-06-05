@@ -1,5 +1,6 @@
-from slack_bot import SlackBot
-from logger.helpers import logging_config
+from slack_bot.slack_bot import slackbot_main
+from slack_bot.helpers import logging_config
 
-if __name__ == '__main__':
-    pass
+if __name__ == "__main__":
+    logging_config()
+    slackbot_main()
