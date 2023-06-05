@@ -26,7 +26,7 @@ jobs:
 
       - name: Publish to Nexus
         run: |
-          twine upload --repository-url http://52.16.240.11:8081/repository/slack-bot-releases/ dist/*
+          twine upload --repository-url http://52.16.240.11:8081/repository/slackbot-releases/ dist/*
         env:
           TWINE_USERNAME: ${{ secrets.NEXUS_USERNAME }}
           TWINE_PASSWORD: ${{ secrets.NEXUS_PASSWORD }}

@@ -11,5 +11,3 @@ $requirements_file = "requirements.txt"
 if (Test-Path $requirements_file) {
     & pip install -r $requirements_file
 }
-
-pip install -r requirements.txt
