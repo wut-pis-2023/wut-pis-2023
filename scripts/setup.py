@@ -3,6 +3,8 @@ from setuptools import setup, find_packages
 with open('scripts/requirements.txt') as f:
     requirements = f.readlines()
 
+print("FOUND PACKAGES", find_packages())
+
 setup(
     name='slack-bot',
     version='1.4.7',
