@@ -1,21 +1,10 @@
-import os
-import logging
 from dotenv import load_dotenv
 from slack_bolt import App
 from slack_bolt.adapter.socket_mode import SocketModeHandler
 from slack_sdk import WebClient
 from slack_sdk.errors import SlackApiError
 
-from similarity_model import SimilarSentenceIdentifier
-
 load_dotenv()
-logger = logging.getLogger("slack-bot")
-
-SLACK_BOT_TOKEN = os.getenv('SLACK_BOT_TOKEN')
-SLACK_APP_TOKEN = os.getenv('SLACK_APP_TOKEN')
-WORKSPACE_NAME = os.getenv('WORKSPACE_NAME')
-
-print(SLACK_BOT_TOKEN, WORKSPACE_NAME, SLACK_APP_TOKEN)
 
 
 class SlackBot:
@@ -24,33 +13,14 @@ class SlackBot:
         self.workspace_name = workspace_name
         self.client = WebClient(token=token)
         self.app = App(token=token)
-        self.model = SimilarSentenceIdentifier()
 
         @self.app.message()
         def say_hello(message, say):
-            MESSAGE_SHORTCUT_LEN = 20
             text = message.get('text')
             channel_id = message.get('channel')
             message_id = message.get('ts')
-            logger.info(f"Message: '{text}' is being analyzed")
 
-            logger.info(f"Retrieving all messages")
-            all_messages = self.read_all_messages()
-
-            self.model.read_slack_dict(data_dict=all_messages, columns_for_model=["link", "text"])
-            self.model.preprocess()
-            similar_messages = self.model.get_similar(message=text, similarity_strength=0.5)
-
-            if len(similar_messages) > 1:
-                similar_messages_str = ""
-                for link_, message_ in similar_messages:
-                    # Ignore the message_ that bot replies to
-                    if link_ == self.get_message_link(channel_id, message_id):
-                        continue
-                    similar_messages_str += f"Message: '{message_[:MESSAGE_SHORTCUT_LEN]}...'\t Link: {link_}\n"
-                say(f"Hey there <@{message['user']}>!\nTheese messages seem to be similar to yours:\n{similar_messages_str}")
-            else:
-                logger.info("No similar messages found")
+            say(f"Hey there <@{message['user']}>!\nYour message: {text}\nLink to message: {self.get_message_link(channel_id, message_id)}")
 
     def get_message_link(self, channel_id, message_id):
         return f"https://{self.workspace_name}.slack.com/archives/{channel_id}/p{message_id.replace('.', '')}"
@@ -72,8 +42,7 @@ class SlackBot:
             all_messages = []
 
             for message in messages:
-                if message.get('subtype') is None and message.get('bot_id') != self.app.client.auth_test().get(
-                        "bot_id"):
+                if message.get('subtype') is None:
                     message_id = message.get('ts')
                     all_messages.append({
                         'id': message_id,
@@ -124,8 +93,3 @@ class SlackBot:
     def run(self, app_token):
         handler = SocketModeHandler(self.app, app_token)
         handler.start()
-
-
-def slackbot_main():
-    slack_bot = SlackBot(token=SLACK_BOT_TOKEN, workspace_name=WORKSPACE_NAME)
-    slack_bot.run(app_token=SLACK_APP_TOKEN)
