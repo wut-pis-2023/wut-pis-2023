@@ -19,7 +19,7 @@ jobs:
           pip install wheel twine
 
       - name: Build package
-        run: python slackbot/setup.py sdist bdist_wheel
+        run: python scripts/setup.py sdist bdist_wheel
 
       - name: Verify built file
         run: ls -l dist/
