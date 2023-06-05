@@ -12,4 +12,4 @@ if (Test-Path $requirements_file) {
     & pip install -r $requirements_file
 }
 
-deactivate
+.\venv\Scripts\activate
