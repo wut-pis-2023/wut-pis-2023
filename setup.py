@@ -5,7 +5,7 @@ with open('scripts/requirements.txt') as f:
 
 setup(
     name='slack-bot',
-    version='1.4.5',
+    version='1.4.6',
     author='The WUT PIS team',
     author_email='pis-wut-2023-best-team@gmail.com',
     description='Great package for detecting similar topics in slack conversations.',

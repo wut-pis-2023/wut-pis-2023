@@ -7,3 +7,4 @@ dist/
 **/myenv/
 src/slack_bot/__pycache__/__init__.cpython-39.pyc
 src/slack_bot/__pycache__/slack_bot.cpython-39.pyc
+venv/
