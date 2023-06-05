@@ -13,3 +13,5 @@ if (Test-Path $requirements_file) {
 }
 
 .\venv\Scripts\activate
+
+pip install -r requirements.txt
