@@ -7,7 +7,7 @@ print("FOUND PACKAGES", find_packages())
 
 setup(
     name='slackbot',
-    version='0.0.1',
+    version='0.0.2',
     author='The WUT PIS team',
     author_email='pis-wut-2023-best-team@gmail.com',
     description='Great package for detecting similar topics in slack conversations.',
