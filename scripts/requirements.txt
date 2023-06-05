@@ -5,5 +5,5 @@ python-dotenv
 slack-sdk
 slack-bolt
 numpy
-setuptools~=65.5.0
+setuptools
 sentence-transformers
